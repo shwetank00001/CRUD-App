@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.div-create{
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+}
+
+.div-create > input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.div-create > button{ 
+  width: 5%;
+}
