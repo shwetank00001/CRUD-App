@@ -8,15 +8,10 @@ const Create = () => {
     phone:""
   })
 
-  const [display, setDisplay] = React.useState([])
-
   function handleSubmit(e){
     e.preventDefault()
     console.log(form)
-    if(form.name && form.email && form.phone){
-      const newData = {...form}
-      setDisplay([...display, newData])
-    }
+    
   }
 
   function handleChange(e){
@@ -29,15 +24,7 @@ const Create = () => {
     })
   }
 
-  const ele = display.map(function(form,item){
-    return(
-      <div key={item}>
-        <h4>{form.fullName}</h4>
-        <h4>{form.email}</h4>
-        <h4>{form.phone}</h4>
-      </div>
-    )
-  })
+
   
   return (
     <div className='div-create'>
@@ -63,9 +50,8 @@ const Create = () => {
           <button>Add</button>
         </form>
 
-        <div>
-          {ele}
-        </div>
+
+
     </div>
   )
 }
