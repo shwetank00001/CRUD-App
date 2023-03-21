@@ -1,6 +1,9 @@
 import React from 'react'
+import axios from 'axios';
 
 const Create = () => {
+
+
 
   const [form ,setForm] = React.useState({
     fullName:"",
@@ -8,8 +11,18 @@ const Create = () => {
     phone:""
   })
 
+  const header = { "Header" : "Header"}
+
+
   function handleSubmit(e){
     e.preventDefault()
+    axios.post('https://6409ca796ecd4f9e18bb3ba4.mockapi.io/test' ,{
+      name: form.name,
+      email: form.email ,
+      phone: form.phone,
+      header
+    })
+
     console.log(form)
     
   }
